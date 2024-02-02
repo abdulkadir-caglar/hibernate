@@ -23,10 +23,13 @@ public class Sales {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "sales_id")
 	private Long id;
+	
 	@Column(name = "piece")
 	private int piece;
+	
 	@Column(name = "product_id")
 	private Product product;
+	
 	@Column(name = "date")
 	private Date date;
 }

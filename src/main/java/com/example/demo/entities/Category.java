@@ -21,8 +21,10 @@ public class Category {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "category_id")
 	private Long id;
+	
 	@Column(name = "category_name")
 	private String name;
+	
 	@Column(name = "parent_id")
 	private Long parentId;
 }

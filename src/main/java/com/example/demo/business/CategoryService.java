@@ -7,13 +7,12 @@ import org.springframework.stereotype.Service;
 import com.example.demo.dals.ICategoryDal;
 import com.example.demo.entities.Category;
 
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
 @Service
 public class CategoryService {
-	private ICategoryDal categoryDal;
-	
-	public CategoryService(ICategoryDal categoryDal) {
-		this.categoryDal = categoryDal;
-	}
+	private final ICategoryDal categoryDal;
 	
 	public Category insert(Category entity) {
 		var result = categoryDal.save(entity);
